@@ -1,0 +1,132 @@
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --bg-color: #f1f1f1;
+    --black: #333;
+    --title-article-color: #0000ee;
+    --link-article-color: #006621;
+}
+
+
+body {
+    background-color: var(--bg-color);
+    color: var(--black);
+    text-align: center;
+    font-family: 'Archivo', sans-serif;
+}
+
+.logo {
+    width: 350px;
+    margin: 50px auto;
+
+}
+
+h1 {
+    font-size: 3rem;
+}
+
+h1 span {
+    font-weight: 300;
+}
+
+input {
+    width: 80%;
+    min-width: 280px;
+    max-width: 800px;
+    height: 50px;
+    margin: 20px 0;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 2px 4px 5px rgb(0, 0, 0, 0.2);
+}
+
+
+
+.articleList {
+    min-width: 200px;
+    width: 70%;
+    max-width: 900px;
+    text-align: start;
+    margin: 50px auto;
+}
+
+a {
+    color: var(--title-article-color);
+}
+
+h3 {
+    margin-top: 10px;
+}
+
+a+a {
+    width: 500px;
+    height: 50px;
+    margin: auto;
+    color: var(--link-article-color);
+    text-decoration: none;
+}
+
+
+/* loader */
+
+.loader {
+    display: none;
+    position: relative;
+    width: 100%;
+    /* height: 50px; */
+}
+
+.loader.visible {
+    display: block;
+}
+
+
+.circle1,
+.circle2,
+.circle3 {
+    position: absolute;
+    background-color: black;
+    border-radius: 50%;
+    width: 15px;
+    height: 15px;
+}
+
+.circle1 {
+    top: 50%;
+    left: 45%;
+    transform: translate(-50%, -50%);
+    animation: upanddown 0.5s alternate infinite;
+}
+
+.circle2 {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    animation: upanddown 0.5s 100ms alternate infinite;
+
+}
+
+.circle3 {
+    top: 50%;
+    left: 55%;
+    transform: translate(-50%, -50%);
+    animation: upanddown 0.5s 200ms alternate infinite;
+
+}
+
+@keyframes upanddown {
+    from {
+        transform: translateY(-20px)
+    }
+
+    to {
+        transform: translateY(10px)
+    }
+}
